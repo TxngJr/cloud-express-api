@@ -24,4 +24,6 @@ router.get("/", fileController.getFile);
 
 router.post("/", upload.single("file"), fileController.uploadFile);
 
+router.delete("/", fileController.deleteAllFiles);
+
 export default router;
