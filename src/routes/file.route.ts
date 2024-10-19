@@ -4,7 +4,7 @@ import multer from "multer";
 const path = require("path");
 
 const storage = multer.diskStorage({
-    destination: "./uploads/",
+    destination: "~/uploads/",
     filename: function (req, file, cb) {
       const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
       const fileExtension = path.extname(file.originalname);
